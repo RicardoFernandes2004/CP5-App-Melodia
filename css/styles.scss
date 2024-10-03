@@ -1,0 +1,302 @@
+$logo-bg-color: #FF007F;
+$hover-color-1: #FFFF00;
+$hover-color-2: #00FFFF;
+$primary-color: #FF007F;
+$secondary-color: #FFFFFF;
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Roboto", system-ui;
+    font-style: normal;
+}
+
+.navbar {
+    background-color: $logo-bg-color;
+
+    .logo-img {
+        width: 100px; 
+        height: 100px;
+    }
+    .navbar-text {
+        font-size: 3.5rem;
+        letter-spacing: 3px;
+        font-weight: bold;
+        color: $hover-color-2; 
+        text-align: center;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        background: linear-gradient(90deg, $hover-color-2 0%, $hover-color-1 100%);
+        background-size: 200% 100%;
+        background-position: left bottom;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        transition: background-position 0.5s ease;
+    
+        &:hover {
+            background-position: right bottom;
+        }
+    }
+
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    margin-right: auto; 
+}
+
+.navbar-collapse {
+    justify-content: center; 
+}
+
+.navbar-nav {
+    margin-left: 0; 
+}
+
+.nav-link {
+    color: $hover-color-2;
+    transition: background-color 0.3s, color 0.3s;
+    border-radius: 20px;
+
+    &:hover {
+        color: #fff;
+        background-color: $hover-color-1;
+    }
+}
+
+.main-section {
+    background-color: rgb(227, 221, 225);
+    background-image: url('../assets/DALL·E\ 2024-10-02\ 18.49.17\ -\ A\ large\ background\ image\ featuring\ a\ Black\ man\ wearing\ a\ white\ T-shirt\ and\ a\ white\ headset\,\ listening\ to\ music\ with\ his\ eyes\ closed.\ He\ is\ positioned\ \(sem_fundo\).png');
+    background-size: 70%;
+    background-position-x: 97%;
+    background-position-y: 50%;
+    padding: 100px 0;
+    background-repeat: no-repeat;
+
+    .container {
+        padding: 0 15px;
+    }
+
+    h1 {
+        color: $secondary-color;
+        font-size: 3rem;
+        margin-bottom: 20px;
+    }
+
+    p {
+        color: $secondary-color;
+        font-size: 1.2rem;
+        margin-bottom: 30px;
+    }
+
+    .btn-primary {
+        background-color: $logo-bg-color;
+        border-color: $logo-bg-color;
+        color: $secondary-color;
+        padding: 10px 20px;
+        font-size: 1.2rem;
+
+        &:hover {
+            background-color: darken($logo-bg-color, 10%);
+            border-color: darken($logo-bg-color, 10%);
+            color: $secondary-color;
+        }
+    }
+}
+
+// Estilos para a seção do carrossel
+.carousel-section {
+    background-color: #f8f9fa;
+    padding: 60px 0;
+
+    h2 {
+        color: $logo-bg-color;
+        margin-bottom: 40px;
+    }
+
+    .carousel {
+        .carousel-inner {
+            .carousel-item {
+                transition: transform 0.5s ease, opacity 0.5s ease-in-out;
+
+                .row {
+                    display: flex;
+                }
+            }
+        }
+
+        .carousel-control-prev-icon,
+        .carousel-control-next-icon {
+            background-color: rgba(0, 0, 0, 0.5);
+            border-radius: 50%;
+        }
+
+        .carousel-indicators li {
+            background-color: $logo-bg-color;
+        }
+    }
+
+    .card {
+        margin-bottom: 30px;
+        .album-img {
+            width: 100%;
+            height: auto;
+            max-height: 300px;
+            object-fit: cover;
+        }
+
+        .card-title {
+            color: $logo-bg-color;
+            font-weight: bold;
+        }
+
+        .card-text {
+            color: #6c757d;
+        }
+
+        audio {
+            width: 100%;
+            margin-top: 15px;
+        }
+    }
+}
+// Seção de Aplicativo Móvel
+.app-section {
+    background-color: #fff;
+    .phone-img {
+        max-width: 60%;
+        height: auto;
+    }
+    h2 {
+        color: $logo-bg-color;
+        font-size: 2.5rem;
+        margin-bottom: 20px;
+    }
+    p {
+        color: #333;
+        font-size: 1.2rem;
+    }
+    .btn-primary {
+        background-color: $logo-bg-color;
+        border-color: $logo-bg-color;
+        color: #fff;
+        padding: 10px 30px;
+        font-size: 1.2rem;
+        border-radius: 50px;
+
+        &:hover {
+            background-color: darken($logo-bg-color, 10%);
+            border-color: darken($logo-bg-color, 10%);
+        }
+    }
+}
+
+
+@media (max-width: 768px) {
+    .app-section {
+        .row {
+            flex-direction: column-reverse;
+            text-align: center;
+        }
+        .phone-img {
+            margin-bottom: 30px;
+        }
+    }
+}
+
+
+
+@media screen and (max-width: 768px) {
+    .carousel-section {
+        .carousel {
+            .carousel-inner {
+                .carousel-item {
+                    .row {
+                        flex-direction: column;
+                        align-items: center;
+                    }
+                    .col-md-4 {
+                        max-width: 100%;
+                    }
+                }
+            }
+        }
+
+        .card {
+            .album-img {
+                width: 100px; 
+                height: 100px; 
+                max-height: none;
+            }
+        }
+    }
+    .navbar-text{
+        font-size: 1.5rem !important; 
+    }
+    .logo-img {
+        width: 50px !important; 
+        height: 50px !important;
+    }
+    .main-section{
+        background-position-y: 24%;
+    }
+}
+
+// Seção de Funcionalidades
+.features-section {
+    background-color: #f8f9fa;
+    padding: 60px 0;
+
+    h2 {
+        color: $logo-bg-color;
+        font-size: 2.5rem;
+        margin-bottom: 40px;
+    }
+
+    .feature-card {
+        border: none;
+        background-color: #fff;
+        transition: transform 0.3s, box-shadow 0.3s;
+        border-radius: 10px;
+
+        &:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+        }
+
+        .card-body {
+            padding: 30px;
+        }
+
+        i {
+            color: $logo-bg-color;
+        }
+
+        .card-title {
+            color: $logo-bg-color;
+            font-size: 1.5rem;
+            margin-top: 15px;
+            margin-bottom: 10px;
+        }
+
+        .card-text {
+            color: #6c757d;
+            font-size: 1rem;
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .features-section {
+        h2 {
+            font-size: 2rem;
+        }
+        .feature-card {
+            margin-bottom: 30px;
+        }
+    }
+}
+

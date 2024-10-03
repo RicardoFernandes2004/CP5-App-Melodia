@@ -1,0 +1,246 @@
+@charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", system-ui;
+  font-style: normal;
+}
+
+.navbar {
+  background-color: #FF007F;
+}
+.navbar .logo-img {
+  width: 100px;
+  height: 100px;
+}
+.navbar .navbar-text {
+  font-size: 3.5rem;
+  letter-spacing: 3px;
+  font-weight: bold;
+  color: #00FFFF;
+  text-align: center;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  background: linear-gradient(90deg, #00FFFF 0%, #FFFF00 100%);
+  background-size: 200% 100%;
+  background-position: left bottom;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition: background-position 0.5s ease;
+}
+.navbar .navbar-text:hover {
+  background-position: right bottom;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  margin-right: auto;
+}
+
+.navbar-collapse {
+  justify-content: center;
+}
+
+.navbar-nav {
+  margin-left: 0;
+}
+
+.nav-link {
+  color: #00FFFF;
+  transition: background-color 0.3s, color 0.3s;
+  border-radius: 20px;
+}
+.nav-link:hover {
+  color: #fff;
+  background-color: #FFFF00;
+}
+
+.main-section {
+  background-color: rgb(227, 221, 225);
+  background-image: url("../assets/DALL·E 2024-10-02 18.49.17 - A large background image featuring a Black man wearing a white T-shirt and a white headset, listening to music with his eyes closed. He is positioned (sem_fundo).png");
+  background-size: 70%;
+  background-position-x: 97%;
+  background-position-y: 50%;
+  padding: 100px 0;
+  background-repeat: no-repeat;
+}
+.main-section .container {
+  padding: 0 15px;
+}
+.main-section h1 {
+  color: #FFFFFF;
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+.main-section p {
+  color: #FFFFFF;
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+}
+.main-section .btn-primary {
+  background-color: #FF007F;
+  border-color: #FF007F;
+  color: #FFFFFF;
+  padding: 10px 20px;
+  font-size: 1.2rem;
+}
+.main-section .btn-primary:hover {
+  background-color: rgb(204, 0, 101.6);
+  border-color: rgb(204, 0, 101.6);
+  color: #FFFFFF;
+}
+
+.carousel-section {
+  background-color: #f8f9fa;
+  padding: 60px 0;
+}
+.carousel-section h2 {
+  color: #FF007F;
+  margin-bottom: 40px;
+}
+.carousel-section .carousel .carousel-inner .carousel-item {
+  transition: transform 0.5s ease, opacity 0.5s ease-in-out;
+}
+.carousel-section .carousel .carousel-inner .carousel-item .row {
+  display: flex;
+}
+.carousel-section .carousel .carousel-control-prev-icon,
+.carousel-section .carousel .carousel-control-next-icon {
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 50%;
+}
+.carousel-section .carousel .carousel-indicators li {
+  background-color: #FF007F;
+}
+.carousel-section .card {
+  margin-bottom: 30px;
+}
+.carousel-section .card .album-img {
+  width: 100%;
+  height: auto;
+  max-height: 300px;
+  object-fit: cover;
+}
+.carousel-section .card .card-title {
+  color: #FF007F;
+  font-weight: bold;
+}
+.carousel-section .card .card-text {
+  color: #6c757d;
+}
+.carousel-section .card audio {
+  width: 100%;
+  margin-top: 15px;
+}
+
+.app-section {
+  background-color: #fff;
+}
+.app-section .phone-img {
+  max-width: 60%;
+  height: auto;
+}
+.app-section h2 {
+  color: #FF007F;
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+.app-section p {
+  color: #333;
+  font-size: 1.2rem;
+}
+.app-section .btn-primary {
+  background-color: #FF007F;
+  border-color: #FF007F;
+  color: #fff;
+  padding: 10px 30px;
+  font-size: 1.2rem;
+  border-radius: 50px;
+}
+.app-section .btn-primary:hover {
+  background-color: rgb(204, 0, 101.6);
+  border-color: rgb(204, 0, 101.6);
+}
+
+@media (max-width: 768px) {
+  .app-section .row {
+    flex-direction: column-reverse;
+    text-align: center;
+  }
+  .app-section .phone-img {
+    margin-bottom: 30px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .carousel-section .carousel .carousel-inner .carousel-item .row {
+    flex-direction: column;
+    align-items: center;
+  }
+  .carousel-section .carousel .carousel-inner .carousel-item .col-md-4 {
+    max-width: 100%;
+  }
+  .carousel-section .card .album-img {
+    width: 100px;
+    height: 100px;
+    max-height: none;
+  }
+  .navbar-text {
+    font-size: 1.5rem !important;
+  }
+  .logo-img {
+    width: 50px !important;
+    height: 50px !important;
+  }
+  .main-section {
+    background-position-y: 24%;
+  }
+}
+.features-section {
+  background-color: #f8f9fa;
+  padding: 60px 0;
+}
+.features-section h2 {
+  color: #FF007F;
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+}
+.features-section .feature-card {
+  border: none;
+  background-color: #fff;
+  transition: transform 0.3s, box-shadow 0.3s;
+  border-radius: 10px;
+}
+.features-section .feature-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+.features-section .feature-card .card-body {
+  padding: 30px;
+}
+.features-section .feature-card i {
+  color: #FF007F;
+}
+.features-section .feature-card .card-title {
+  color: #FF007F;
+  font-size: 1.5rem;
+  margin-top: 15px;
+  margin-bottom: 10px;
+}
+.features-section .feature-card .card-text {
+  color: #6c757d;
+  font-size: 1rem;
+}
+
+@media (max-width: 768px) {
+  .features-section h2 {
+    font-size: 2rem;
+  }
+  .features-section .feature-card {
+    margin-bottom: 30px;
+  }
+}
+
+/*# sourceMappingURL=styles.css.map */
