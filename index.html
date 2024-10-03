@@ -296,7 +296,7 @@
             <h2 class="text-center mb-5">Entre em Contato</h2>
             <div class="row">
                 <div class="col-md-8 mx-auto">
-                    <form id="contactForm" action="#" method="post">
+                    <form id="contactForm" action="#contato" method="post">
                         <div class="form-row">
                             <div class="form-group col-md-6">
                                 <label for="name">Nome</label>
@@ -315,7 +315,7 @@
                             <label for="message">Mensagem</label>
                             <textarea class="form-control" id="message" name="message" rows="5" placeholder="Escreva sua mensagem aqui..." required></textarea>
                         </div>
-                        <button type="submit" class="btn btn-primary btn-lg btn-block">Enviar Mensagem</button>
+                        <button type="submit" class="btn btn-primary btn-lg btn-block" onclick="alert('Mensagem enviada!')">Enviar Mensagem</button>
                     </form>
                 </div>
             </div>
@@ -372,6 +372,15 @@
                         scrollTop: target.offset().top - 70
                     }, 1000);
                 }
+            });
+            
+            // Manipular o envio do formulário
+            $('#contactForm').on('submit', function(event) {
+                event.preventDefault(); 
+
+                $('#formMessage').html('<div class="alert alert-success" role="alert">Sua mensagem foi enviada com sucesso!</div>').fadeIn();
+
+                $(this).trigger('reset');
             });
         });
     </script>
