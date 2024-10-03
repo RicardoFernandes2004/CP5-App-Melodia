@@ -205,11 +205,7 @@ $secondary-color: #FFFFFF;
             margin-bottom: 30px;
         }
     }
-}
 
-
-
-@media screen and (max-width: 768px) {
     .carousel-section {
         .carousel {
             .carousel-inner {
@@ -241,7 +237,11 @@ $secondary-color: #FFFFFF;
         height: 50px !important;
     }
     .main-section{
-        background-position-y: 24%;
+        background-position-y: 55%;
+        p{
+            width: 50%;
+            
+        }
     }
 }
 
@@ -299,4 +299,168 @@ $secondary-color: #FFFFFF;
         }
     }
 }
+// Seção de Depoimentos
+.testimonials-section {
+    background-color: #fff;
+    padding: 60px 0;
 
+    h2 {
+        color: $logo-bg-color;
+        font-size: 2.5rem;
+        margin-bottom: 40px;
+    }
+
+    .testimonial-card {
+        border: none;
+        background-color: #f8f9fa;
+        transition: transform 0.3s, box-shadow 0.3s;
+        border-radius: 10px;
+        margin-bottom: 30px;
+
+        &:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+        }
+
+        .testimonial-img {
+            width: 120px;   
+            height: 120px;  
+            border-radius: 50%;
+            object-fit: cover;
+            margin: 0 auto;  
+        }
+
+        .card-title {
+            color: $logo-bg-color;
+            font-size: 1.5rem;
+            margin-top: 15px;
+        }
+
+        .card-text {
+            color: #6c757d;
+            font-style: italic;
+            margin-top: 15px;
+        }
+    }
+}
+
+// Responsividade
+@media (max-width: 768px) {
+    .testimonials-section {
+        h2 {
+            font-size: 2rem;
+        }
+
+        .testimonial-card {
+            margin-bottom: 30px;
+        }
+    }
+}
+
+// Footer
+.footer-section {
+    background-color: $logo-bg-color;
+    color: $secondary-color;
+
+    h5 {
+        color: $secondary-color;
+        font-size: 1.5rem;
+        margin-bottom: 20px;
+    }
+
+    p, a, li {
+        color: rgba($secondary-color, 0.8);
+        font-size: 1rem;
+    }
+
+    a {
+        text-decoration: none;
+
+        &:hover {
+            color: $hover-color-1;
+        }
+    }
+
+    .social-icon {
+        margin-right: 15px;
+        color: $secondary-color;
+
+        &:hover {
+            color: $hover-color-1;
+        }
+    }
+
+    hr {
+        border-color: rgba($secondary-color, 0.2);
+    }
+
+    .list-unstyled li {
+        margin-bottom: 10px;
+    }
+
+    @media (max-width: 768px) {
+        .social-icon {
+            margin-right: 10px;
+            margin-bottom: 10px;
+        }
+        .col-md-4 {
+            margin-bottom: 20px;
+            text-align: center;
+        }
+    }
+}
+
+// Seção de Contato
+.contact-section {
+    background-color: #f8f9fa;
+    padding: 60px 0;
+
+    h2 {
+        color: $logo-bg-color;
+        font-size: 2.5rem;
+        margin-bottom: 40px;
+    }
+
+    .form-control {
+        border-radius: 0;
+        border: 1px solid #ced4da;
+        font-size: 1rem;
+        padding: 10px 15px;
+        transition: border-color 0.3s;
+
+        &:focus {
+            border-color: $logo-bg-color;
+            box-shadow: none;
+        }
+    }
+
+    .btn-primary {
+        background-color: $logo-bg-color;
+        border-color: $logo-bg-color;
+        padding: 12px 20px;
+        font-size: 1.2rem;
+        border-radius: 50px;
+        transition: background-color 0.3s, border-color 0.3s;
+
+        &:hover {
+            background-color: darken($logo-bg-color, 10%);
+            border-color: darken($logo-bg-color, 10%);
+        }
+    }
+
+    label {
+        color: #6c757d;
+        font-weight: bold;
+    }
+
+    // Responsividade
+    @media (max-width: 768px) {
+        h2 {
+            font-size: 2rem;
+        }
+
+        .btn-primary {
+            font-size: 1rem;
+        }
+    }
+}
