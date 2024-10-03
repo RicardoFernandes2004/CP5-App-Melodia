@@ -1,5 +1,6 @@
 
 # Melodia
+## FICTÍCIO (projeto universitário)
 
 Melodia é um site de streaming de música que oferece uma experiência personalizada para os usuários. Com milhões de músicas, playlists personalizadas, modo offline e muito mais, o Melodia traz a música para a sua vida de forma simples e agradável.
 
